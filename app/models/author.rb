@@ -1,2 +1,2 @@
-class Author < User
+class Author < ApplicationRecord
 end
