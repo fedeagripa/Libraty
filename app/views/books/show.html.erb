@@ -1,0 +1,50 @@
+<div class="container">
+    <p id="notice"><%= notice %></p>
+    <div class="col-xs-8 col-xs-offset-2">
+        <!--Book img + description + info--> 
+        <div class="col-xs-12" style="display:flex;justify-content: space-between;">
+            <div class = "col-xs-12">
+                <a href="#" class="thumbnail">
+                    <%=image_tag "the-lord-of-the-rings-book-cover.jpg"%>
+                </a>
+            </div>
+            <div class="col-xs-12">
+                <h3> <%= @book.title %> </h3>
+                <div style="display:flex;justify-content: space-between;">
+                    <div>
+                        <div>
+                            <%= "#{@book.author.first_name} #{@book.author.last_name}"  %>
+                        </div>
+                        <div>
+                            <%= @book.year.to_time.strftime('%Y') %>
+                        </div>
+                    </div>
+                    <div>
+                        </br>
+                        <div>
+                            <%= link_to "Request", [@book.author, @book]%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Book comment list--> 
+        <div class="col-xs-12">
+          <h4> Comments </h4>
+            <div>
+            </div>
+        </div>
+
+        <!--Book img + description + info--> 
+        <div class="col-xs-12">
+            <h4> Add a comment - Rate: </h4>
+            <div class = "field">
+                <%= text_area_tag :comment,nil %>
+            </div>
+            <div style="float:right;">
+                <%= link_to 'Comment', author_books_path, :class => "btn btn-default" %>
+            </div>
+        </div>
+    </div>
+</div>
