@@ -26,21 +26,27 @@
                         </div>
                     </div>
                 </div>
+
+                <div>
+                  <hr>
+                  <%= @book.description %>
+                </div>
             </div>
         </div>
         
         <!--Book comment list--> 
         <div class="col-xs-12">
+          <hr>
           <h4> Comments </h4>
             <div>
             </div>
         </div>
-
         <!--Book img + description + info--> 
         <div class="col-xs-12">
+            <hr>
             <h4> Add a comment - Rate: </h4>
             <div class = "field">
-                <%= text_area_tag :comment,nil %>
+                <%= text_area_tag :comment,"Comment" %>
             </div>
             <div style="float:right;">
                 <%= link_to 'Comment', author_books_path, :class => "btn btn-default" %>
