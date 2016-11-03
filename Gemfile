@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'therubyracer'
 gem 'less-rails-bootstrap'
 
+gem 'devise'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
