@@ -1,0 +1,44 @@
+textarea {
+	resize: vertical; /* Prevent rezising horizontally*/
+	width: 100%;
+	box-sizing: border-box;
+}
+
+hr{
+	border-top: 1px solid grey;
+}
+
+hr.small{
+	border-top: 1px solid lightgrey;
+	width: 25%;
+	margin: 10px 0 10px 0;	
+}
+
+hr.light{
+	border-top: 1px solid lightgrey;
+	margin: 10px 0 10px 0;	
+}
+
+td{
+	color:grey;
+}
+
+a.under {
+	color:black;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+a.light{
+	color:grey;
+}
+
+a.black{
+	color:black;
+	font-weight: bold;
+}
+
+.btn-default{
+	background-color: black;
+	color :white; 
+}
