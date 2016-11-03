@@ -22,13 +22,13 @@
                     <div>
                         </br>
                         <div>
-                            <%= link_to "Request", [@book.author, @book]%>
+                            <b><%= link_to "Request", [@book.author, @book], :class => "under"%></b>
                         </div>
                     </div>
                 </div>
 
                 <div>
-                  <hr>
+                  <hr class="light">
                   <%= @book.description %>
                 </div>
             </div>
@@ -36,6 +36,7 @@
         
         <!--Book comment list--> 
         <div class="col-xs-12">
+          <hr>
           <h4> Comments </h4>
             <% @book.comments.each_with_index do |c,i| %>
               <div>
@@ -46,7 +47,7 @@
                 <%= c.text %>
               </div>
               <% if i != @book.comments.size-1 %>
-                <hr class="small">
+                <hr class="small light">
               <%end%>
             <% end %>
         </div>
