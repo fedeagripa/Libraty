@@ -19,12 +19,26 @@ hr.light{
 	margin: 10px 0 10px 0;	
 }
 
-.btn-default{
-	background-color: black;
-	color :white; 
+td{
+	color:grey;
 }
 
 a.under {
 	color:black;
 	text-decoration: underline;
+	font-weight: bold;
+}
+
+a.light{
+	color:grey;
+}
+
+a.black{
+	color:black;
+	font-weight: bold;
+}
+
+.btn-default{
+	background-color: black;
+	color :white; 
 }
