@@ -36,17 +36,18 @@
         
         <!--Book comment list--> 
         <div class="col-xs-12">
-          <hr>
           <h4> Comments </h4>
-            <% @book.comments.each do |c| %>
+            <% @book.comments.each_with_index do |c,i| %>
               <div>
-                <hr>
                 <b><%= c.user.first_name %></b>
                 <%= c.rate %>
               </div>
               <div>
                 <%= c.text %>
               </div>
+              <% if i != @book.comments.size-1 %>
+                <hr class="small">
+              <%end%>
             <% end %>
         </div>
         <!--Book img + description + info--> 
