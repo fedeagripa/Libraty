@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="col-xs-6 col-xs-offset-3">
+    <h2 class="col-xs-12 "><b>Welcome to The Library </b></h2>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="col-xs-8 col-xs-offset-1 style-4">
+        </br>
+        <%= f.email_field :email, autofocus: true,:placeholder => "Email", :class => "underline-session" %>
+      </div>
+
+      <div class="col-xs-8 col-xs-offset-1 style-4">
+        <%= f.password_field :password, autocomplete: "off",:placeholder => "Password", :class => "underline-session"%>
+      </div>
+
+      <div class="col-xs-2 col-xs-offset-4 actions">
+      </br>
+      </br>
+        <%= f.submit "Sign in",:class => "sign-in" %>
+      </div>
+    <% end %>
+  </div>
+</div>

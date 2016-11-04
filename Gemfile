@@ -30,6 +30,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'therubyracer'
 gem 'less-rails-bootstrap'
 
+gem 'devise'
+gem 'rspec-rails', '~> 3.5.2'
+gem 'rspec-core', '~> 3.5.2'
+gem "factory_girl_rails", "~> 4.0"
+gem 'faker'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
