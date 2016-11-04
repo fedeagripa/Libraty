@@ -1,10 +1,12 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /bookings
   # GET /bookings.json
   def index
-    @bookings = Booking.all
+    puts "======================================================"
+    puts current_user.email
+    @bookings = Booking.where('user_id' => current_user.id)
   end
 
   # GET /bookings/1
