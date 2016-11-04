@@ -18,7 +18,7 @@
         </td>
         <td><%= book.year.to_time.strftime('%Y')%></td>
 
-        <td><%= link_to 'Request', [book.author, book], :class => "under" %></td>
+        <td><%= link_to 'Request', bookings_path, :class => "under" %></td>
       </tr>
     <% end %>
   </tbody>

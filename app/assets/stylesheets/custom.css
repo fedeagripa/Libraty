@@ -42,3 +42,13 @@ a.black{
 	background-color: black;
 	color :white; 
 }
+
+.Pending{
+  color:lightgrey;
+}
+.Aproved{
+  color:lightseagreen;
+}
+.Denied{
+  color:orange;
+}
