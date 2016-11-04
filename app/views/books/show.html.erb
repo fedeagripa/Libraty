@@ -29,7 +29,11 @@
 
                 <div>
                   <hr class="light">
-                  <%= @book.description %>
+                    <% if @book.description? %>
+                      <%= @book.description %>
+                    <% else %>
+                      o_O ups... someone forgot this  O_o
+                    <% end %> 
                 </div>
             </div>
         </div>
@@ -41,26 +45,31 @@
             <% @book.comments.each_with_index do |c,i| %>
               <div>
                 <b><%= c.user.first_name %></b>
-                <%= c.rate %>
+                <%= " - #{c.rate} " %>
               </div>
               <div>
-                <%= c.text %>
+                <%= c.text %> 
               </div>
               <% if i != @book.comments.size-1 %>
                 <hr class="small light">
               <%end%>
             <% end %>
+            <% if @book.comments.size == 0 %>
+              <p> No one interested yet :(  </p>
+            <% end %> 
         </div>
         <!--Book img + description + info--> 
-        <div class="col-xs-12">
+        <div class="col-xs-12" id="new_comment">
+          <%= form_for([@book.author,@book,Comment.new], remote: true) do |c| %>
             <hr>
             <h4> Add a comment - Rate: </h4>
             <div class = "field">
-                <%= text_area_tag :comment,"Comment" %>
+                <%= c.text_area :text %>
             </div>
             <div style="float:right;">
-                <%= link_to 'Comment', author_books_path, :class => "btn btn-default" %>
+              <%= c.submit 'Comment', :class => "btn btn-default"%>
             </div>
+          <% end %> 
         </div>
     </div>
 </div>
