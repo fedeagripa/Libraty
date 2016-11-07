@@ -8,13 +8,13 @@ hr{
 	border-top: 1px solid grey;
 }
 
-hr.small{
+hr.small {
 	border-top: 1px solid lightgrey;
 	width: 25%;
 	margin: 10px 0 10px 0;	
 }
 
-hr.light{
+hr.light {
 	border-top: 1px solid lightgrey;
 	margin: 10px 0 10px 0;	
 }
@@ -29,16 +29,29 @@ a.under {
 	font-weight: bold;
 }
 
-a.light{
+a.light {
 	color:grey;
 }
 
-a.black{
+a.black {
 	color:black;
 	font-weight: bold;
 }
 
-.btn-default{
+.btn-default {
 	background-color: black;
 	color :white; 
+}
+
+.pending {
+  color:lightgrey;
+}
+.aproved {
+  color:lightseagreen;
+}
+.denied {
+  color:orange;
+}
+.finished {
+  color:red;
 }
