@@ -22,7 +22,7 @@
                     <div>
                         </br>
                         <div>
-                            <b><%= link_to "Request", [@book.author, @book], :class => "under"%></b>
+                            <%= link_to 'Request', author_book_bookings_path(@book.author,@book), method: :post, :class => "under" %>
                         </div>
                     </div>
                 </div>
