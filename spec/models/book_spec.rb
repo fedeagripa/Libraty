@@ -2,11 +2,11 @@ require "rails_helper"
 
 RSpec.describe Book do
 
-	it { should validate_presence_of(:title)}
+	#it { should validate_presence_of(:title)}
 
-  context "with 2 or more comments" do
-    it "orders them in reverse chronologically" do
-      book = build(:book)
+  context "creation" do
+    it "create with title" do 
+      book = create(:book)
     end
   end
 end
