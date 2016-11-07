@@ -6,6 +6,6 @@ class Booking < ApplicationRecord
   before_validation :set_status
 
   def set_status
-      self.stat = 'pending'
+      self.stat = 0
   end
 end
