@@ -2,17 +2,6 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
-  # GET /comments
-  # GET /comments.json
-  def index
-    @comments = Comment.all
-  end
-
-  # GET /comments/new
-  def new
-    @comment = Comment.new
-  end
-
   # POST /comments
   # POST /comments.json
   def create
