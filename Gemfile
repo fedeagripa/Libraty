@@ -35,6 +35,7 @@ gem 'rspec-rails', '~> 3.5.2'
 gem 'rspec-core', '~> 3.5.2'
 gem "factory_girl_rails", "~> 4.0"
 gem 'faker'
+gem 'shoulda-matchers', '~> 3.1'
 
 gem 'pry', '~> 0.10.4'
 # Use Capistrano for deployment
