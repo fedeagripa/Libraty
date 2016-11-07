@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => {registrations:'registrations'}
 	root to: 'books#index'
-  resources :bookings
+  resources :bookings, only: [:index]
 	resources :authors do
 		resources :books do
+      resources :bookings, only: [:create]
       resources :comments
     end
 	end

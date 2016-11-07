@@ -4,8 +4,6 @@ class BookingsController < ApplicationController
   # GET /bookings
   # GET /bookings.json
   def index
-    puts "======================================================"
-    puts current_user.email
     @bookings = Booking.where('user_id' => current_user.id)
   end
 
@@ -26,17 +24,11 @@ class BookingsController < ApplicationController
   # POST /bookings
   # POST /bookings.json
   def create
+    puts "--------------"
+    puts booking_params
     @booking = Booking.new(booking_params)
-
-    respond_to do |format|
-      if @booking.save
-        format.html { redirect_to @booking, notice: 'Booking was successfully created.' }
-        format.json { render :show, status: :created, location: @booking }
-      else
-        format.html { render :new }
-        format.json { render json: @booking.errors, status: :unprocessable_entity }
-      end
-    end
+    @booking.save
+    redirect_to action: "index"
   end
 
   # PATCH/PUT /bookings/1
@@ -71,6 +63,6 @@ class BookingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params
-      params.fetch(:booking, {})
+      params.permit(:book_id).merge(user_id: current_user.id)
     end
 end
