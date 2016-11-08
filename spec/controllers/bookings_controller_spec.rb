@@ -10,7 +10,7 @@ RSpec.describe BookingsController, type: :controller do
   end
 
   describe "GET #index" do
-    it "assigns all bookings as @bookings" do
+    it "response 200 my bookings" do
       get :index
       expect(response).to have_http_status(200)
     end

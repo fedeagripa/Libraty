@@ -4,4 +4,6 @@ class Book < ApplicationRecord
 	has_many :bookings
 
   validates :title, presence: true
+  validates :year, presence: true
+  validates :isbn, presence: true
 end
