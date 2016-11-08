@@ -1,0 +1,4 @@
+$("#new_comment").append("<hr class='small light'>")
+$("#new_comment").append("<div><b><%= @comment.user.first_name %></b></div>")
+$("#new_comment").append("<div> <%= @comment.text %> </div>")
+$("#comment_area").val("")
