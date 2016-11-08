@@ -9,15 +9,6 @@ RSpec.describe BookingsController, type: :controller do
     @book = create(:book)
   end
 
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
-
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
-  let(:valid_session) { {} }
-
   describe "GET #index" do
     it "assigns all bookings as @bookings" do
       get :index
