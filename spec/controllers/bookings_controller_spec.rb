@@ -25,7 +25,7 @@ RSpec.describe BookingsController, type: :controller do
     end
   end
 
-  describe "GET show" do
+  describe "POST create" do
 
     it "increment bookings count" do
       expect {
