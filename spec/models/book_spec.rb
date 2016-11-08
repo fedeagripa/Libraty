@@ -10,7 +10,8 @@ RSpec.describe Book do
 
   context "creation" do
     it "create random book" do 
-      build(:book).should be_valid
+      book = create(:book)
+      expect(book).to be_valid
     end
   end
 end

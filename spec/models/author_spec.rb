@@ -6,7 +6,8 @@ RSpec.describe Author do
 
   context "creation" do
     it "create random author" do 
-      build(:author).should be_valid
+      author = create(:author)
+      expect(author).to be_valid
     end
   end
 end

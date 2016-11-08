@@ -6,7 +6,8 @@ RSpec.describe Comment do
 
   context "creation" do
     it "create random comment" do 
-      build(:comment).should be_valid
+      comment = create(:comment)
+      expect(comment).to be_valid
     end
   end
 end
