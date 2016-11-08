@@ -39,7 +39,7 @@
         </div>
         
         <!--Book comment list--> 
-        <div class="col-xs-12">
+        <div class="col-xs-12" id="new_comment">
           <hr>
           <h4> Comments </h4>
             <% @book.comments.each_with_index do |c,i| %>
@@ -59,12 +59,12 @@
             <% end %> 
         </div>
         <!--Book img + description + info--> 
-        <div class="col-xs-12" id="new_comment">
+        <div class="col-xs-12">
           <%= form_for([@book.author,@book,Comment.new], remote: true) do |c| %>
             <hr>
             <h4> Add a comment - Rate: </h4>
             <div class = "field">
-                <%= c.text_area :text %>
+                <%= c.text_area :text,id:"comment_area" %>
             </div>
             <div style="float:right;">
               <%= c.submit 'Comment', :class => "btn btn-default"%>
