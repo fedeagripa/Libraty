@@ -1,5 +1,5 @@
-ActiveAdmin.register Book do
-
+ActiveAdmin.register Booking do
+  belongs_to :book
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -12,11 +12,6 @@ ActiveAdmin.register Book do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-sidebar "Book requests", only: [:show, :edit] do
-    ul do
-      li link_to "Aprove", admin_book_booking_path(Booking)
-    end
-  end
-permit_params :title, :year, :isbn, :author_id
 
+permit_params :text, :book_id, :author_id
 end
