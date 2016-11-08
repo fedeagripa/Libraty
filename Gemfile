@@ -36,6 +36,8 @@ gem 'rspec-core', '~> 3.5.2'
 gem "factory_girl_rails", "~> 4.0"
 gem 'faker'
 gem 'shoulda-matchers', '~> 3.1'
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem 'pry', '~> 0.10.4'
 # Use Capistrano for deployment
