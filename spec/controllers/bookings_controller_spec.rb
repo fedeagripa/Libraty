@@ -4,6 +4,9 @@ RSpec.describe BookingsController, type: :controller do
   before(:each) do
     @user = create(:user)
     sign_in(@user)
+
+    @author = create(:author)
+    @book = create(:book)
   end
 
   let(:valid_attributes) {
@@ -22,11 +25,18 @@ RSpec.describe BookingsController, type: :controller do
     end
   end
 
-  describe "GET #show" do
-    it "assigns the requested booking as @booking" do
-      booking = Booking.create! valid_attributes
-      get :show, params: {id: booking.to_param}, session: valid_session
-      expect(assigns(:booking)).to eq(booking)
+  describe "GET show" do
+
+    it "increment bookings count" do
+      expect {
+        post :create, author_id: @author.id, book_id: @book.id, booking: {}
+      }.to change(Booking, :count).by(1)
+    end
+
+    it "redirect to index" do
+      post :create, author_id: @author.id, book_id: @book.id, booking: {}
+      expect(response).to have_http_status(302)
     end
   end
+
 end
