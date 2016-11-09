@@ -38,6 +38,7 @@ gem 'faker'
 gem 'shoulda-matchers', '~> 3.1'
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 
 gem 'pry', '~> 0.10.4'
 # Use Capistrano for deployment
