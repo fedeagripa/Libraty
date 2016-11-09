@@ -8,4 +8,8 @@ class Book < ApplicationRecord
   validates :isbn, presence: true
 
   mount_uploader :image, ImageUploader
+
+  def self.search(search)
+    where("title LIKE ?", "%#{search}%")
+  end
 end
