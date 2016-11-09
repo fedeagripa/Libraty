@@ -6,4 +6,6 @@ class Book < ApplicationRecord
   validates :title, presence: true
   validates :year, presence: true
   validates :isbn, presence: true
+
+  mount_uploader :image, ImageUploader
 end

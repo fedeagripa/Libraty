@@ -12,6 +12,15 @@ ActiveAdmin.register Book do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-permit_params :title, :year, :isbn, :author_id
+form(:html => { :multipart => true }) do |f|
+  f.inputs "Book Details" do
+      f.input :title
+      f.input :year
+      f.input :isbn
+      f.input :image, :as => :file
+      f.actions
+    end
+end
+permit_params :title, :year, :isbn, :author_id, :image
 
 end
