@@ -1,5 +1,4 @@
 ActiveAdmin.register Booking do
-  belongs_to :book
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -12,6 +11,11 @@ ActiveAdmin.register Booking do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
-permit_params :text, :book_id, :author_id
+  form do |f|
+    f.inputs "Booking Details" do
+      f.input :stat
+      f.actions
+    end
+  end
+  permit_params :stat, :book_id, :user_id
 end
