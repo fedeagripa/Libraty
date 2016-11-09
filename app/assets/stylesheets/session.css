@@ -1,8 +1,11 @@
 .underline-session {
-  padding: 10px;
+  padding-left: 15px;
+  padding-bottom: 3px;
+  padding-top: 10px;
   border: none;
-  border-bottom: solid 2px #c9c9c9;
+  border-bottom: solid 2px black;
   transition: border 0.3s;
+
   width:100%;
 }
 
@@ -13,4 +16,13 @@
 	font-weight: bold;
 	color: black;
 	background-color: white;
+}
+
+.style-4{
+    
+}
+
+
+::-webkit-input-placeholder{
+  position: absolute; top:0;left:0;
 }
