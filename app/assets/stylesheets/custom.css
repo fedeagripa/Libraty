@@ -33,6 +33,11 @@ a.light {
 	color:grey;
 }
 
+p.small-light{
+	color:grey;
+	font-size: 90%;	
+}
+
 a.black {
 	color:black;
 	font-weight: bold;
