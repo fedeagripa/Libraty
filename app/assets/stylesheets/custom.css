@@ -19,7 +19,12 @@ hr.light {
 	margin: 10px 0 10px 0;	
 }
 
-td{
+td.black{
+	color:black;
+	font-weight: bold;
+}
+
+td.grey{
 	color:grey;
 }
 

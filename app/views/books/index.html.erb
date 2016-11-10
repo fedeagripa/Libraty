@@ -16,7 +16,7 @@
         <td>
           <%= link_to "#{book.author.first_name} #{book.author.last_name}", book.author, :class => "light" %>
         </td>
-        <td><%= book.year.to_time.strftime('%Y')%></td>
+        <td class="grey"><%= book.year.to_time.strftime('%Y')%></td>
 
         <td><%= link_to 'Request', author_book_bookings_path(book.author,book), method: :post, :class => "under" %></td>
       </tr>
