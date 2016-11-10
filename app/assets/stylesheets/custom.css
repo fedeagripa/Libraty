@@ -38,6 +38,10 @@ a.black {
 	font-weight: bold;
 }
 
+a.soft-black {
+	color:#4a4b4c;
+}
+
 .btn-default {
 	background-color: black;
 	color :white; 
