@@ -38,11 +38,6 @@ a.light {
 	color:grey;
 }
 
-p.small-light{
-	color:grey;
-	font-size: 90%;	
-}
-
 a.black {
 	color:black;
 	font-weight: bold;
@@ -52,11 +47,21 @@ a.soft-black {
 	color:#4a4b4c;
 }
 
+p.small-light{
+	color:grey;
+	font-size: 90%;	
+}
+
+p.light{
+	color:grey;
+}
+
 .btn-default {
 	background-color: black;
 	color :white; 
 }
 
+/* ======== MY BOOKS ========*/ 
 .pending {
   color:lightgrey;
 }
@@ -68,4 +73,24 @@ a.soft-black {
 }
 .finished {
   color:red;
+}
+.my-books{
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#black{
+	font-weight: bold;
+	color:black;
+}
+
+/* ======== OVERRIDE NAV ========*/ 
+#navbar {
+	border:0;
+	border-bottom: 2px solid black; min-height: 20px; 
+	margin-bottom: 5px; position: relative; background-color: #f6f6f6;
+}
+
+body{
+	background-color: #f6f6f6;
 }
