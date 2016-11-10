@@ -19,6 +19,10 @@ hr.light {
 	margin: 10px 0 10px 0;	
 }
 
+hr.no-top{
+	margin-top: 0;
+}
+
 td.black{
 	color:black;
 	font-weight: bold;
@@ -75,7 +79,8 @@ p.light{
   color:red;
 }
 .my-books{
-	text-decoration: underline;
+	border-bottom: 2px solid black;
+	padding-bottom: 1px;
 	font-weight: bold;
 }
 
