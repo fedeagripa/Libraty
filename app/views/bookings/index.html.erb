@@ -12,12 +12,12 @@
   <tbody>
     <% @bookings.each do |booking| %>
       <tr>
-      <td><%= booking.book.year.to_time.strftime('%d-%m-%Y')%></td>
+      <td class="black"><%= booking.book.year.to_time.strftime('%d-%m-%Y') %></td>
         <td><%= link_to booking.book.title, [booking.book.author,booking.book],:class => "black"%></td>
         <td>
           <%= link_to "#{booking.book.author.first_name} #{booking.book.author.last_name}", booking.book.author, :class => "light" %>
         </td>
-        <td><p class="<%= booking.stat %>"> <%= booking.stat %><p></td>
+        <td><p class="<%= booking.stat %>"> <%= booking.stat.capitalize %><p></td>
       </tr>
     <% end %>
   </tbody>

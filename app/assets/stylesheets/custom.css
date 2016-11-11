@@ -19,7 +19,16 @@ hr.light {
 	margin: 10px 0 10px 0;	
 }
 
-td{
+hr.no-top{
+	margin-top: 0;
+}
+
+td.black{
+	color:black;
+	font-weight: bold;
+}
+
+td.grey{
 	color:grey;
 }
 
@@ -38,15 +47,37 @@ a.black {
 	font-weight: bold;
 }
 
+a.soft-black {
+	color:#4a4b4c;
+}
+
+p.small-light{
+	color:grey;
+	font-size: 90%;	
+}
+
+p.light{
+	color:grey;
+}
+
 .btn-default {
 	background-color: black;
 	color :white; 
 }
 
+.my-br{
+	margin-top: 20px;
+}
+
+.my-br-2{
+	margin-top: 40px;
+}
+
+/* ======== MY BOOKS ========*/ 
 .pending {
   color:lightgrey;
 }
-.aproved {
+.acepted {
   color:lightseagreen;
 }
 .denied {
@@ -54,4 +85,28 @@ a.black {
 }
 .finished {
   color:red;
+}
+.my-books{
+	border-bottom: 2px solid black;
+	padding-bottom: 1px;
+	font-weight: bold;
+}
+
+#black{
+	font-weight: bold;
+	color:black;
+}
+
+/* ======== OVERRIDE NAV ========*/ 
+#navbar {
+	border:0;
+	border-bottom: 2px solid black;
+	min-height: 20px; 
+	margin-bottom: 5px;
+	position: relative;
+	background-color: #f6f6f6;
+}
+
+body{
+	background-color: #f6f6f6;
 }
