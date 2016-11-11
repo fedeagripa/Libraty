@@ -65,6 +65,14 @@ p.light{
 	color :white; 
 }
 
+.my-br{
+	margin-top: 20px;
+}
+
+.my-br-2{
+	margin-top: 40px;
+}
+
 /* ======== MY BOOKS ========*/ 
 .pending {
   color:lightgrey;
