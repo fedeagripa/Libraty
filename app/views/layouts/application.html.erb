@@ -19,10 +19,15 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <%= link_to "The Library",root_path,:class => "navbar-brand", :id => "black"%>
+	      <% if user_signed_in? %>
+	      	<%= link_to "The Library",root_path,:class => "navbar-brand", :id => "black"%>
+	      <% else %>
+	      	<p class="navbar-brand"> The Library </p>
+	      <% end %>
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    	<% if user_signed_in? %>
 	    		<% if current_page?(root_path) %>
 			      <%= form_tag(root_path, 	:method => "get", :class => "navbar-form navbar-left", :id => "search-form") do %>
 							<div class="form-group">
@@ -31,10 +36,10 @@
 			        <%= submit_tag "Search", :title => nil, :class => "btn btn-default" %>
 			      <% end %>
 		      <% end %> 
-		    
+		    <% end %>
 	      <ul class="nav navbar-nav navbar-right">
-	      	<li class="my-books"> <%= link_to "My Books", bookings_path, :id => "black" %> </li>
 	      	<% if user_signed_in? %>
+	      		<li class="my-books"> <%= link_to "My Books", bookings_path, :id => "black" %> </li>
 	        	<li> <%= link_to "LOG OUT", destroy_user_session_path ,method: :delete, :id => "black" %></li>
 	        <% else %>
 	        	<li> <%= link_to "SIGN UP", new_user_registration_path, :class => "black" %></li>
@@ -44,6 +49,10 @@
 	    </div>
 	  </div>
 	</nav>
+	<p id="notice"><%= notice %></p>
+	<% if flash %>
+		<%= flash[:alert] %>
+	<% end %>
     <%= yield %>
   </body>
 </html>

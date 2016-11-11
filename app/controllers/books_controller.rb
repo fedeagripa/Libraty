@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show]
+  before_action :authenticate_user!
 
   # GET /books
   # GET /books.json
