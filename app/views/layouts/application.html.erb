@@ -50,6 +50,9 @@
 	  </div>
 	</nav>
 	<p id="notice"><%= notice %></p>
+	<% if flash %>
+		<%= flash[:alert] %>
+	<% end %>
     <%= yield %>
   </body>
 </html>
